@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Savorloop helps people reduce food waste with simple tips, smarter planning and leftover ideas." />
+  <title>Savorloop | Reduce Food Waste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">Savorloop</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#tips">Tips</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Save food. Save money. Waste less.</span>
+          <h1>Small changes can make a big difference.</h1>
+          <p>
+            Savorloop is a simple food-waste awareness project designed to help households
+            make better use of the food they already have.
+          </p>
+          <a href="#tips" class="button">See simple tips</a>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/savorloop-banner.png" alt="Savorloop food waste awareness illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>What is Savorloop?</h2>
+        <p>
+          Savorloop encourages people to reduce avoidable food waste through planning,
+          correct storage, portion awareness and creative use of leftovers.
+        </p>
+        <p>
+          The idea is simple: use more of what you buy, throw away less, and make everyday
+          food choices a little more sustainable.
+        </p>
+      </div>
+    </section>
+
+    <section id="tips" class="section section-soft">
+      <div class="container">
+        <h2>Easy ways to reduce food waste</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon">📝</div>
+            <h3>Plan before shopping</h3>
+            <p>Check what you already have and make a short shopping list before buying more.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🥕</div>
+            <h3>Use older food first</h3>
+            <p>Keep food that needs using soon at the front of your fridge or cupboard.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🍲</div>
+            <h3>Reuse leftovers</h3>
+            <p>Turn leftover ingredients into soups, sandwiches, pasta dishes or simple lunches.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">❄️</div>
+            <h3>Freeze what you can</h3>
+            <p>Freeze suitable food before it goes out of date instead of throwing it away.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section">
+      <div class="container">
+        <div class="impact-box">
+          <div>
+            <span class="eyebrow">Why it matters</span>
+            <h2>Less waste means better use of food, money and resources.</h2>
+          </div>
+          <div class="impact-list">
+            <div><strong>1.</strong> Buy only what you need.</div>
+            <div><strong>2.</strong> Store food properly.</div>
+            <div><strong>3.</strong> Use leftovers creatively.</div>
+            <div><strong>4.</strong> Waste less over time.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-soft">
+      <div class="container narrow center">
+        <h2>About this project</h2>
+        <p>
+          Savorloop was created as a university project to promote simple and practical ways
+          of reducing household food waste.
+        </p>
+        <button class="button button-secondary" id="tipButton">Show me a food-saving tip</button>
+        <p id="randomTip" class="random-tip" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Savorloop</p>
+      <p>University project website</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
