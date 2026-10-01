@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Savorloop helps people reduce food waste with simple tips, smarter planning and leftover ideas." />
+  <meta name="description" content="Savorloop helps households reduce food waste with simple tips, smarter planning and subscription tools." />
   <title>Savorloop | Reduce Food Waste</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,12 +11,13 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#home" class="brand">Savorloop</a>
+      <a href="index.html" class="brand">Savorloop</a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#tips">Tips</a>
+        <a href="#plans">Plans</a>
         <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
     </div>
   </header>
@@ -28,34 +29,40 @@
           <span class="eyebrow">Save food. Save money. Waste less.</span>
           <h1>Small changes can make a big difference.</h1>
           <p>
-            Savorloop is a simple food-waste awareness project designed to help households
-            make better use of the food they already have.
+            Savorloop is a simple food-waste service designed to help households
+            make better use of the food they already have, reduce unnecessary waste
+            and save money.
           </p>
-          <a href="#tips" class="button">See simple tips</a>
+          <div class="button-row">
+            <a href="#plans" class="button">View plans</a>
+            <a href="#tips" class="button button-outline">See simple tips</a>
+          </div>
         </div>
 
         <div class="hero-image">
-          <img src="images/savorloop-banner.png" alt="Savorloop food waste awareness illustration" />
+          <img src="images/savorloop-banner.png" alt="Colourful Savorloop food waste awareness illustration" />
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="container narrow">
-        <h2>What is Savorloop?</h2>
+        <span class="eyebrow">About Savorloop</span>
+        <h2>Helping households get more from the food they buy.</h2>
         <p>
-          Savorloop encourages people to reduce avoidable food waste through planning,
+          Savorloop encourages people to reduce avoidable food waste through meal planning,
           correct storage, portion awareness and creative use of leftovers.
         </p>
         <p>
-          The idea is simple: use more of what you buy, throw away less, and make everyday
-          food choices a little more sustainable.
+          The service is designed to make food management easier by helping users keep track
+          of what they have, discover ways to use ingredients and build better everyday habits.
         </p>
       </div>
     </section>
 
     <section id="tips" class="section section-soft">
       <div class="container">
+        <span class="eyebrow">Simple changes</span>
         <h2>Easy ways to reduce food waste</h2>
         <div class="card-grid">
           <article class="card">
@@ -85,7 +92,64 @@
       </div>
     </section>
 
-    <section id="impact" class="section">
+    <section id="plans" class="section">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">Choose your plan</span>
+          <h2>Start using Savorloop</h2>
+          <p>
+            Choose a simple membership option based on how much support you want with
+            planning meals and reducing household food waste.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="plan-label">Starter</span>
+            <h3>Free</h3>
+            <div class="price">£0<span>/month</span></div>
+            <ul class="feature-list">
+              <li>Basic food-saving tips</li>
+              <li>Weekly meal-planning ideas</li>
+              <li>Leftover inspiration</li>
+            </ul>
+            <button class="button plan-button" data-plan="Starter">Get started</button>
+          </article>
+
+          <article class="price-card featured">
+            <span class="plan-label">Most popular</span>
+            <h3>Savorloop Plus</h3>
+            <div class="price">£3.99<span>/month</span></div>
+            <ul class="feature-list">
+              <li>Everything in Starter</li>
+              <li>Food expiry reminders</li>
+              <li>Personalised meal ideas</li>
+              <li>Monthly waste summary</li>
+            </ul>
+            <button class="button plan-button" data-plan="Savorloop Plus">Subscribe</button>
+          </article>
+
+          <article class="price-card">
+            <span class="plan-label">Annual</span>
+            <h3>Savorloop Plus Yearly</h3>
+            <div class="price">£39.99<span>/year</span></div>
+            <ul class="feature-list">
+              <li>All Plus features</li>
+              <li>Lower yearly cost</li>
+              <li>Annual food-saving report</li>
+            </ul>
+            <button class="button plan-button" data-plan="Savorloop Plus Yearly">Purchase</button>
+          </article>
+        </div>
+
+        <p class="demo-note center">
+          Demo pricing for this university project. No real payment will be taken.
+        </p>
+        <div id="planMessage" class="plan-message center" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="impact" class="section section-soft">
       <div class="container">
         <div class="impact-box">
           <div>
@@ -102,15 +166,15 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-soft">
+    <section class="section">
       <div class="container narrow center">
-        <h2>About this project</h2>
+        <span class="eyebrow">Need help?</span>
+        <h2>Get in touch with Savorloop</h2>
         <p>
-          Savorloop was created as a university project to promote simple and practical ways
-          of reducing household food waste.
+          Questions about a plan, the project or how Savorloop works? Visit our contact page
+          for our email address, telephone number and contact form.
         </p>
-        <button class="button button-secondary" id="tipButton">Show me a food-saving tip</button>
-        <p id="randomTip" class="random-tip" aria-live="polite"></p>
+        <a class="button" href="contact.html">Contact Us</a>
       </div>
     </section>
   </main>
@@ -118,6 +182,11 @@
   <footer>
     <div class="container footer-wrap">
       <p>© <span id="year"></span> Savorloop</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#plans">Plans</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
       <p>University project website</p>
     </div>
   </footer>

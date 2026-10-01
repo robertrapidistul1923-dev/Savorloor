@@ -13,6 +13,7 @@
   --text: #203022;
   --muted: #617064;
   --border: #dde8d9;
+  --white: #ffffff;
 }
 
 html {
@@ -85,7 +86,8 @@ nav a {
   color: var(--muted);
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: var(--green);
 }
 
@@ -100,16 +102,28 @@ nav a:hover {
   gap: 48px;
 }
 
-.hero h1 {
+.hero h1,
+.page-hero h1 {
   font-size: clamp(2.3rem, 5vw, 4.8rem);
   line-height: 1.02;
   margin: 14px 0 18px;
 }
 
-.hero p {
+.hero p,
+.page-hero p {
   font-size: 1.1rem;
   color: var(--muted);
   max-width: 620px;
+}
+
+.page-hero {
+  padding: 90px 0 55px;
+  background: var(--soft);
+}
+
+.page-hero p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .eyebrow {
@@ -127,9 +141,16 @@ nav a:hover {
   box-shadow: 0 18px 45px rgba(47, 125, 50, 0.12);
 }
 
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
 .button {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 8px;
   border: 0;
   background: var(--green);
   color: white;
@@ -145,12 +166,15 @@ nav a:hover {
   background: var(--green-dark);
 }
 
-.button-secondary {
-  background: var(--orange);
+.button-outline {
+  background: transparent;
+  color: var(--green-dark);
+  border: 2px solid var(--green);
 }
 
-.button-secondary:hover {
-  background: #d95724;
+.button-outline:hover {
+  background: var(--green);
+  color: white;
 }
 
 .section {
@@ -163,11 +187,16 @@ nav a:hover {
 
 .section h2 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
-  margin: 0 0 20px;
+  margin: 4px 0 20px;
 }
 
 .section p {
   color: var(--muted);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 34px;
 }
 
 .card-grid {
@@ -194,6 +223,81 @@ nav a:hover {
 
 .card p {
   margin: 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.price-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card.featured {
+  border: 2px solid var(--green);
+  box-shadow: 0 14px 35px rgba(47, 125, 50, 0.12);
+  transform: translateY(-6px);
+}
+
+.plan-label {
+  color: var(--orange);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+}
+
+.price-card h3 {
+  margin: 10px 0 4px;
+  font-size: 1.45rem;
+}
+
+.price {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--green-dark);
+  margin: 4px 0 18px;
+}
+
+.price span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.feature-list {
+  padding-left: 20px;
+  color: var(--muted);
+  flex: 1;
+}
+
+.feature-list li {
+  margin: 9px 0;
+}
+
+.plan-button {
+  width: 100%;
+}
+
+.demo-note {
+  margin-top: 22px;
+  font-size: 0.9rem;
+  color: #7a6f50 !important;
+}
+
+.plan-message {
+  min-height: 30px;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--green-dark);
 }
 
 .impact-box {
@@ -227,11 +331,87 @@ nav a:hover {
   margin-right: 8px;
 }
 
-.random-tip {
-  min-height: 28px;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-details,
+.contact-form {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.contact-details h2,
+.contact-form h2 {
+  margin-top: 0;
+}
+
+.contact-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-item:last-of-type {
+  border-bottom: none;
+}
+
+.contact-icon {
+  font-size: 1.45rem;
+}
+
+.contact-item p {
+  margin: 3px 0 0;
+}
+
+.contact-item a {
+  color: var(--green-dark);
+}
+
+.left-note {
+  text-align: left;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cdd8cb;
+  border-radius: 9px;
+  font: inherit;
+  background: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(47, 125, 50, 0.25);
+  border-color: var(--green);
+}
+
+.form-message {
+  min-height: 26px;
+  margin: 0;
   font-weight: 700;
   color: var(--green-dark) !important;
-  margin-top: 20px;
 }
 
 footer {
@@ -243,6 +423,7 @@ footer {
 .footer-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -252,14 +433,36 @@ footer {
   opacity: 0.85;
 }
 
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 @media (max-width: 850px) {
   .hero-grid,
-  .impact-box {
+  .impact-box,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .card-grid {
+  .card-grid,
+  .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-card.featured {
+    transform: none;
   }
 
   .nav-wrap {
@@ -269,7 +472,7 @@ footer {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 620px) {
   nav {
     gap: 12px;
     font-size: 0.92rem;
@@ -279,11 +482,19 @@ footer {
     padding-top: 46px;
   }
 
-  .card-grid {
+  .card-grid,
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
-  .impact-box {
-    padding: 28px;
+  .impact-box,
+  .contact-details,
+  .contact-form {
+    padding: 25px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

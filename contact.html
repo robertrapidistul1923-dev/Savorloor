@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Savorloop for help, enquiries and product information." />
+  <title>Contact Us | Savorloop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">Savorloop</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#plans">Plans</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow center">
+        <span class="eyebrow">Contact Us</span>
+        <h1>We'd love to hear from you.</h1>
+        <p>
+          Get in touch if you have a question about Savorloop, one of our plans,
+          or reducing food waste at home.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-details">
+          <h2>Savorloop Support</h2>
+          <p>Our fictional support team is available Monday to Friday, 9:00am to 5:00pm.</p>
+
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:hello@savorloop.example">hello@savorloop.example</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">☎️</span>
+            <div>
+              <strong>Telephone</strong>
+              <p><a href="tel:+441632960842">01632 960 842</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Office</strong>
+              <p>Savorloop, 24 Greenway Court, London, UK</p>
+            </div>
+          </div>
+
+          <p class="demo-note left-note">
+            Contact information on this page is fictional and shown for demonstration purposes only.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h2>Send us a message</h2>
+
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Choose a subject</option>
+            <option>General enquiry</option>
+            <option>Subscription question</option>
+            <option>Technical support</option>
+            <option>Feedback</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit" class="button">Send message</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Savorloop</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#plans">Plans</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <p>University project website</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

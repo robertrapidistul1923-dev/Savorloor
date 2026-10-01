@@ -1,23 +1,34 @@
 # Savorloop Website
 
-A simple static website for a university project about reducing household food waste.
+A simple static website for a university project focused on reducing household food waste.
 
-## Files
+## Pages and features
 
-- `index.html` - main website
-- `style.css` - design and layout
-- `script.js` - small interactive food-saving tip feature
+- `index.html` - homepage
+- `contact.html` - Contact Us page
+- `style.css` - design and responsive layout
+- `script.js` - demo subscription buttons and contact form interaction
 - `images/savorloop-banner.png` - Savorloop branding image
 
-## Publish free with GitHub Pages
+The homepage includes:
+- About Savorloop
+- Food-waste reduction tips
+- Free and paid subscription/purchase options
+- Impact section
+- Link to the Contact Us page
 
-1. Create a free GitHub account.
-2. Create a new public repository called `savorloop`.
-3. Upload all files and folders from this project.
-4. Open the repository and go to **Settings > Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select the `main` branch and `/ (root)`, then click **Save**.
-7. GitHub will provide a public URL, usually:
-   `https://YOUR-USERNAME.github.io/savorloop/`
+The Contact Us page contains clearly fictional contact information and a demonstration contact form.
 
-Keep the folder structure intact when uploading.
+## Updating the existing GitHub Pages website
+
+Upload the new files into the existing `Savorloop` repository and replace the old files when GitHub asks.
+
+Make sure the repository root contains:
+
+- `index.html`
+- `contact.html`
+- `style.css`
+- `script.js`
+- `images/savorloop-banner.png`
+
+GitHub Pages will automatically redeploy after the changes are committed.
